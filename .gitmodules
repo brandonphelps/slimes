@@ -1,0 +1,3 @@
+[submodule "libraries/lovebird"]
+	path = libraries/lovebird
+	url = https://github.com/rxi/lovebird
