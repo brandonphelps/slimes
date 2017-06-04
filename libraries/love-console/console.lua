@@ -601,7 +601,7 @@ function a(str, level)
 end
 
 -- auto-initialize so that console.load() is optional
-console.load()
+console.load(nil, nil, nil, "scissor")
 console.i(console.motd)
 
 return console
