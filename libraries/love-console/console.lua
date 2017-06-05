@@ -206,6 +206,11 @@ function console.setMotd(message)
 	console.motd = message
 end
 
+function console.setPos(x, y)
+  console.x = x
+  console.y = y
+end
+
 function console.resize( w, h )
 	console.w, console.h = w, h / 3
 	console.y = console.lineHeight - console.lineHeight * console.lineSpacing

@@ -52,6 +52,7 @@ function love.load()
    current_room = nil
    gotoRoom('Game', 'game')
    console.load()
+   console.setPos(10, 30)
    console.i('hello')
 end
 
