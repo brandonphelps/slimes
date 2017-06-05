@@ -22,8 +22,13 @@ function editor.load(font)
    editor.lineHeight = editor.fontSize * editor.lineSpacing
    editor.x, editor.y = 0, 0
    
+   editor.colors = {}
+   editor.colors["input"]      = { r = 23, g = 55, b = 86, a = 190}
+   editor.colors["background"] = { r = 23, g = 55, b = 85, a = 255}
    
+   editors.resize(love.graphics.getWidth(), love.graphics.getHeight())
 end
+
 
 function editor.update(dt)
 
@@ -42,6 +47,17 @@ function editor.draw()
    local cr, cg, cb, ca = love.graphics.getColorMask()
    local sx, sy, sw, sh = love.graphics.getScissor()
    local canvas = love.graphics.getCanvas()
+
+   love.graphics.origin()
+   love.graphics.setBlendMode("alpha")
+   love.graphics.setColorMask(true, true, true, true)
+   love.graphics.setCanvas()
+
+   local color = editor.colors.background
+   love.graphics.setColor(color.r, color.g, color.b, color.a)
+   love.graphics.rectangle("fill", console.x, console.y, console.w, console.h)
+   
+   color = editor.colors.input
 
 
    love.graphics.setCanvas(canvas)

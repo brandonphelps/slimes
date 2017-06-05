@@ -67,7 +67,7 @@ local console = {
 }
 
 -- Dynamic polygons used to draw the arrows
-local up = function (x, y, w)
+local up = function (x, y, w)o
 	w = w * .7
 	local h = w * .7
 	return {
